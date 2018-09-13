@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+group 'wang.huaiting'
+version '1.0'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile (
+            "io.netty:netty-all:4.1.10.Final"
+    )
+}
