@@ -18,7 +18,7 @@ public class MyClient {
 
             ChannelFuture channelFuture = bootstrap.connect("localhost", 8899).sync();
 
-            channelFuture.channel().writeAndFlush("hello wanghuaiting");
+//            channelFuture.channel().writeAndFlush("hello wanghuaiting");
             channelFuture.channel().closeFuture().sync();
 
         } finally {

@@ -15,6 +15,12 @@ public class MyClientHandler extends SimpleChannelInboundHandler<String> {
     }
 
     @Override
+    public void channelActive(ChannelHandlerContext ctx) throws Exception {
+        // 链接完成后就触发，所以这里定义可以在链接上服务器后发出第一个请求
+        ctx.writeAndFlush("this is client channel active");
+    }
+
+    @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
         cause.printStackTrace();
 
