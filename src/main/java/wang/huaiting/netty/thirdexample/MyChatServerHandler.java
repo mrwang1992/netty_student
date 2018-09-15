@@ -45,7 +45,8 @@ public class MyChatServerHandler extends SimpleChannelInboundHandler<String> {
 
         Channel channel = ctx.channel();
 
-        channel.writeAndFlush("[服务器] - " + channel.remoteAddress() + " 离开 \n");
+        channelGroup.writeAndFlush("[服务器] - " +
+                " 用户 {" + channel.remoteAddress() +"} 离开， 当前用户数：" + channelGroup.size() + " \n");
 
         // 链接断开后删除客户端channel（netty其实会自动调用，写不写都可以）
 //        channelGroup.remove(channel);
