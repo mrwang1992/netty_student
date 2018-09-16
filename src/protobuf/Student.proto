@@ -1,0 +1,18 @@
+syntax = "proto2";
+
+package wang.huaiting.protobuf;
+
+option optimize_for = SPEED; // 设置为SPEED 能加快编译
+option java_package = "wang.huaiting.protobuf";
+option java_outer_classname = "DataInfo";
+
+// 运行命令
+// protoc --java_out=src/main/java src/protobuf/Student.proto
+
+
+message Student {
+    required string name = 1;
+    optional int32 age = 2;
+    optional string address = 3;
+}
+
