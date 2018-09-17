@@ -1,0 +1,18 @@
+syntax = "proto2";
+
+package wang.huaiting.protobuf;
+
+option optimize_for = SPEED; // 设置为SPEED 能加快编译
+option java_package = "wang.huaiting.netty.sixthexample";
+option java_outer_classname = "MyDataInfo";
+
+// 运行命令
+// protoc --java_out=src/main/java src/protobuf/Person.proto
+
+
+message Person {
+    required string name = 1;
+    optional int32 age = 2;
+    optional string address = 3;
+}
+
