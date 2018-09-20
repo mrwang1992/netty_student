@@ -17,7 +17,7 @@ public class TestClientInitializer extends ChannelInitializer<SocketChannel> {
 
         // 设定自己定义的 MessageType
         channelPipeline.addLast(new ProtobufDecoder(
-                MyDataInfo.Person.getDefaultInstance()
+                MyDataInfo.MyMessage.getDefaultInstance()
         ));
 
         channelPipeline.addLast(new ProtobufVarint32LengthFieldPrepender());

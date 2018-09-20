@@ -9,10 +9,36 @@ option java_outer_classname = "MyDataInfo";
 // 运行命令
 // protoc --java_out=src/main/java src/protobuf/Person.proto
 
+message MyMessage {
+    enum DataType {
+        PersonType = 1;
+        DogType = 2;
+        CatType = 3;
+    }
+
+    required DataType data_type = 1;
+
+    // oneof 同时只会出现一种消息，减少内存占用，定义两个的话 后一个定义的会把之前的给清理掉
+    oneof dataBody {
+        Person person = 2;
+        Dog dog = 3;
+        Cat cat = 4;
+    }
+}
 
 message Person {
-    required string name = 1;
+    optional string name = 1;
     optional int32 age = 2;
     optional string address = 3;
+}
+
+message Dog {
+    optional string name = 1;
+    optional int32 agr = 2;
+}
+
+message Cat {
+    optional string name = 1;
+    optional string city = 2;
 }
 

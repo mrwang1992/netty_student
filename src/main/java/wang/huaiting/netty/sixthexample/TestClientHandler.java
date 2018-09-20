@@ -4,6 +4,8 @@ import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 
+import java.util.Random;
+
 public class TestClientHandler extends SimpleChannelInboundHandler<MyDataInfo.Person> {
     @Override
     protected void channelRead0(ChannelHandlerContext ctx, MyDataInfo.Person msg) throws Exception {
@@ -12,12 +14,33 @@ public class TestClientHandler extends SimpleChannelInboundHandler<MyDataInfo.Pe
 
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
+
         Channel channel = ctx.channel();
 
-        MyDataInfo.Person person = MyDataInfo.Person.newBuilder()
-                                            .setName("wanghuaiting")
-                                            .setAge(26).setAddress("beijing").build();
+        int randomInt = new Random().nextInt(3);
 
-        channel.writeAndFlush(person);
+        MyDataInfo.MyMessage myMessage = null;
+
+        if (0 == randomInt) {
+            myMessage = MyDataInfo.MyMessage.newBuilder()
+                    .setDataType(MyDataInfo.MyMessage.DataType.PersonType)
+                    .setPerson(
+                            MyDataInfo.Person.newBuilder().setName("zhangsan").setAddress("beijing").setAge(26).build()
+                    ).build();
+        } else if (1 == randomInt) {
+            myMessage = MyDataInfo.MyMessage.newBuilder()
+                    .setDataType(MyDataInfo.MyMessage.DataType.DogType)
+                    .setDog(
+                            MyDataInfo.Dog.newBuilder().setName("dog").setAgr(12).build()
+                    ).build();
+        } else {
+            myMessage = MyDataInfo.MyMessage.newBuilder()
+                    .setDataType(MyDataInfo.MyMessage.DataType.CatType)
+                    .setCat(
+                            MyDataInfo.Cat.newBuilder().setName("cat").setCity("beijing").build()
+                    ).build();
+        }
+
+        channel.writeAndFlush(myMessage);
     }
 }
