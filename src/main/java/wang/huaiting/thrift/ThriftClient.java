@@ -10,21 +10,23 @@ import thrift.generated.PersonService;
 
 public class ThriftClient {
     public static void main(String[] args) {
+        // 传输协议要与服务端对应保持一致
         TTransport transport = new TFramedTransport(new TSocket("localhost", 8899), 600);
         TProtocol protocol = new TCompactProtocol(transport);
 
         PersonService.Client client = new PersonService.Client(protocol);
 
         try {
+            // 打开传输
             transport.open();
-            Person person = client.getPersonByUsername("wanghuaiting");
 
+            // 调用方法
+            Person person = client.getPersonByUsername("wanghuaiting");
             System.out.println(person);
 
             System.out.println("========");
 
             Person person1 = new Person();
-
             person1.setUsername("lisi");
             person1.setAge(30);
             person1.setMarried(true);

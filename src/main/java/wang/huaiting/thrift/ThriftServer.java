@@ -10,19 +10,23 @@ import thrift.generated.PersonService;
 
 public class ThriftServer {
     public static void main(String[] args) throws Exception {
-        TNonblockingServerSocket socket = new TNonblockingServerSocket(8899);
+        TNonblockingServerSocket socket = new TNonblockingServerSocket(8899); // 非阻塞的 server socket
 
+        // 高可用的 THsHaServer 设置器, 并设置多线程
         THsHaServer.Args arg = new THsHaServer.Args(socket).minWorkerThreads(2).maxWorkerThreads(4);
+
+        // 具体业务处理器
         PersonService.Processor<PersonServiceImpl> processor = new PersonService.Processor<>(new PersonServiceImpl());
 
-        arg.protocolFactory(new TCompactProtocol.Factory());
-        arg.transportFactory(new TFramedTransport.Factory());
-        arg.processorFactory(new TProcessorFactory(processor));
+        // 工厂
+        arg.protocolFactory(new TCompactProtocol.Factory()); // 压缩的
+        arg.transportFactory(new TFramedTransport.Factory()); // 传输协议
+        arg.processorFactory(new TProcessorFactory(processor)); // 处理器
 
         TServer server = new THsHaServer(arg);
 
         System.out.println("Thrift Server Started!");
 
-        server.serve();
+        server.serve(); // 启动，一个异步非阻塞死循环
     }
 }
