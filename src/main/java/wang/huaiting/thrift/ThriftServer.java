@@ -19,8 +19,8 @@ public class ThriftServer {
         PersonService.Processor<PersonServiceImpl> processor = new PersonService.Processor<>(new PersonServiceImpl());
 
         // 工厂
-        arg.protocolFactory(new TCompactProtocol.Factory()); // 压缩的
-        arg.transportFactory(new TFramedTransport.Factory()); // 传输协议
+        arg.protocolFactory(new TCompactProtocol.Factory()); // 协议层，TCompactProtocol 二进制压缩协议
+        arg.transportFactory(new TFramedTransport.Factory()); // 传输层，TFramedTransport 以二进制帧传递
         arg.processorFactory(new TProcessorFactory(processor)); // 处理器
 
         TServer server = new THsHaServer(arg);

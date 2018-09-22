@@ -1,4 +1,5 @@
 namespace java thrift.generated
+namespace py py.thrift.generated // 定义py包结构
 
 typedef i16 short
 typedef i32 int
@@ -26,4 +27,5 @@ service PersonService {
 /**
 * 生成的命令
 *   thrift --gen java src/thrift/data.thrift
+*   thrift --gen py src/thrift/data.thrift  // 生成py代码
 **/
