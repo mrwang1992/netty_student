@@ -6,9 +6,18 @@ option java_package = "wang.huaiting.proto";
 option java_outer_classname = "StudentProto";
 option java_multiple_files = true;
 
+// 生成命令: gradle generateProto
 
 service StudentService {
-    rpc GetRealNameByUsername(MyRequest) returns (MyResponse) {}
+    rpc GetRealNameByUsername (MyRequest) returns (MyResponse) {}
+
+    // 返回流式数据响应 规范 要求请求和返回必须为 message 类型的 所以不能直接用 int32
+    rpc GetStudentsByAge (StudentRequest) returns (stream StudentResponse) {}
+
+    // 发送流数据 返回list
+    rpc GetStudentWrapperByAges(stream StudentRequest) returns (StudentResponseList) {}
+
+
 }
 
 message MyRequest {
@@ -17,4 +26,18 @@ message MyRequest {
 
 message MyResponse {
     string ralname = 2;
+}
+
+message StudentRequest {
+    int32 age = 1;
+}
+
+message StudentResponse {
+    string name = 1;
+    int32 age = 2;
+    string city = 3;
+}
+
+message StudentResponseList {
+    repeated StudentResponse studentResponse = 1;
 }

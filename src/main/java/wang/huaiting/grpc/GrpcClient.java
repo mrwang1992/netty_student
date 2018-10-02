@@ -2,9 +2,9 @@ package wang.huaiting.grpc;
 
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
-import wang.huaiting.proto.MyRequest;
-import wang.huaiting.proto.MyResponse;
-import wang.huaiting.proto.StudentServiceGrpc;
+import wang.huaiting.proto.*;
+
+import java.util.Iterator;
 
 public class GrpcClient {
     public static void main(String[] args) {
@@ -18,5 +18,12 @@ public class GrpcClient {
             System.out.println(myResponse.getRalname());
         }
 
+        System.out.println(" ===== getStudentsByAge ====== ");
+
+        Iterator<StudentResponse> studentResponses = blockingStub.getStudentsByAge(StudentRequest.newBuilder().setAge(12).build());
+
+        while (studentResponses.hasNext()) {
+            System.out.println("==> " + studentResponses.next());
+        }
     }
 }
