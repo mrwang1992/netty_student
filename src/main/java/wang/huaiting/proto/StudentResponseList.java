@@ -259,7 +259,7 @@ public  final class StudentResponseList extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:wang.huaitng.proto.StudentResponseList)
-      wang.huaiting.proto.StudentResponseListOrBuilder {
+      StudentResponseListOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return StudentProto.internal_static_wang_huaitng_proto_StudentResponseList_descriptor;
