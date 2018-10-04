@@ -17,7 +17,7 @@ buildscript {
 }
 
 dependencies {
-    compile (
+    compile(
             "io.netty:netty-all:4.1.10.Final",
             "com.google.protobuf:protobuf-java:3.3.1",
             "com.google.protobuf:protobuf-java-util:3.3.1",
@@ -38,9 +38,16 @@ protobuf {
             artifact = 'io.grpc:protoc-gen-grpc-java:1.4.0'
         }
     }
+
+    // 指定生成代码路径
+    generateProtoTasks.generatedFilesBaseDir = "src"
+
     generateProtoTasks {
         all()*.plugins {
-            grpc {}
+            grpc {
+                // 生成的服务类代码路径
+                setOutputSubDir 'java'
+            }
         }
     }
 }
