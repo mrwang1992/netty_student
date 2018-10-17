@@ -43,17 +43,18 @@ public class NioTest12 {
 
             serverSocket.bind(inetSocketAddress);
 
-            // 将 channel 注册到 selector 当中
+            // 将 channel 注册到 selector 当中 并且声明感兴趣 连接的事件
             serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT);
 
             System.out.println("监听端口: " + ports[i]);
         }
 
         while (true) {
-            // 返回 selector 当中存在事件量
+            // 返回 selector 当中存在selectionKey的数量， 表明selector中存在事件， 其是阻塞的
             int numbers = selector.select();
             System.out.println("numbers: " + numbers);
 
+            // 返回 selectionKey 集合，
             Set<SelectionKey> selectionKeySet = selector.selectedKeys();
 
             System.out.println("selectionKeys: " + selectionKeySet);
@@ -66,25 +67,35 @@ public class NioTest12 {
 
                 SelectionKey selectionKey = iterator.next();
 
+                // isAcceptable 发生已经可以连接的事件
                 if (selectionKey.isAcceptable()) {
+                    // 通过 selectionKey 获取到channel 进行进一步处理
                     ServerSocketChannel serverSocketChannel = (ServerSocketChannel) selectionKey.channel();
+
                     SocketChannel socketChannel = serverSocketChannel.accept();
 
+                    // 设置为 非阻塞 socketChannel 操作
                     socketChannel.configureBlocking(false);
 
+                    // 讲连接的 channel 注册到selector 当中，表明为可读
                     socketChannel.register(selector, SelectionKey.OP_READ);
 
+                    // 一定要调用remove进行删除，不然事件还会被获取到 触发异常
                     iterator.remove();
 
                     System.out.println("获得客户端连接: " + socketChannel);
 
+                } else if (selectionKey.isReadable()) { // selectionKey 为可读事件 进入到读取逻辑
 
-                } else if (selectionKey.isReadable()) {
+                    // 代码逻辑同上
                     SocketChannel socketChannel = (SocketChannel) selectionKey.channel();
 
+                    // 读取数据
                     int bytesRead = 0;
+
+                    ByteBuffer byteBuffer = ByteBuffer.allocate(512);
+
                     while (true) {
-                        ByteBuffer byteBuffer = ByteBuffer.allocate(512);
 
                         byteBuffer.clear();
 
