@@ -18,7 +18,7 @@ public  final class StreamResponse extends
     responseInfo_ = "";
   }
 
-  @Override
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -44,7 +44,7 @@ public  final class StreamResponse extends
             break;
           }
           case 10: {
-            String s = input.readStringRequireUtf8();
+            java.lang.String s = input.readStringRequireUtf8();
 
             responseInfo_ = s;
             break;
@@ -62,29 +62,29 @@ public  final class StreamResponse extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return StudentProto.internal_static_wang_huaitng_proto_StreamResponse_descriptor;
+    return wang.huaiting.proto.StudentProto.internal_static_wang_huaitng_proto_StreamResponse_descriptor;
   }
 
-  protected FieldAccessorTable
+  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return StudentProto.internal_static_wang_huaitng_proto_StreamResponse_fieldAccessorTable
+    return wang.huaiting.proto.StudentProto.internal_static_wang_huaitng_proto_StreamResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            StreamResponse.class, Builder.class);
+            wang.huaiting.proto.StreamResponse.class, wang.huaiting.proto.StreamResponse.Builder.class);
   }
 
   public static final int RESPONSE_INFO_FIELD_NUMBER = 1;
-  private volatile Object responseInfo_;
+  private volatile java.lang.Object responseInfo_;
   /**
    * <code>string response_info = 1;</code>
    */
-  public String getResponseInfo() {
-    Object ref = responseInfo_;
-    if (ref instanceof String) {
-      return (String) ref;
+  public java.lang.String getResponseInfo() {
+    java.lang.Object ref = responseInfo_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
-      String s = bs.toStringUtf8();
+      java.lang.String s = bs.toStringUtf8();
       responseInfo_ = s;
       return s;
     }
@@ -94,11 +94,11 @@ public  final class StreamResponse extends
    */
   public com.google.protobuf.ByteString
       getResponseInfoBytes() {
-    Object ref = responseInfo_;
-    if (ref instanceof String) {
+    java.lang.Object ref = responseInfo_;
+    if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
-              (String) ref);
+              (java.lang.String) ref);
       responseInfo_ = b;
       return b;
     } else {
@@ -136,15 +136,15 @@ public  final class StreamResponse extends
   }
 
   private static final long serialVersionUID = 0L;
-  @Override
-  public boolean equals(final Object obj) {
+  @java.lang.Override
+  public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof StreamResponse)) {
+    if (!(obj instanceof wang.huaiting.proto.StreamResponse)) {
       return super.equals(obj);
     }
-    StreamResponse other = (StreamResponse) obj;
+    wang.huaiting.proto.StreamResponse other = (wang.huaiting.proto.StreamResponse) obj;
 
     boolean result = true;
     result = result && getResponseInfo()
@@ -152,7 +152,7 @@ public  final class StreamResponse extends
     return result;
   }
 
-  @Override
+  @java.lang.Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -166,58 +166,58 @@ public  final class StreamResponse extends
     return hash;
   }
 
-  public static StreamResponse parseFrom(
+  public static wang.huaiting.proto.StreamResponse parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static StreamResponse parseFrom(
+  public static wang.huaiting.proto.StreamResponse parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static StreamResponse parseFrom(byte[] data)
+  public static wang.huaiting.proto.StreamResponse parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static StreamResponse parseFrom(
+  public static wang.huaiting.proto.StreamResponse parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static StreamResponse parseFrom(java.io.InputStream input)
+  public static wang.huaiting.proto.StreamResponse parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static StreamResponse parseFrom(
+  public static wang.huaiting.proto.StreamResponse parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static StreamResponse parseDelimitedFrom(java.io.InputStream input)
+  public static wang.huaiting.proto.StreamResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static StreamResponse parseDelimitedFrom(
+  public static wang.huaiting.proto.StreamResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static StreamResponse parseFrom(
+  public static wang.huaiting.proto.StreamResponse parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static StreamResponse parseFrom(
+  public static wang.huaiting.proto.StreamResponse parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -229,7 +229,7 @@ public  final class StreamResponse extends
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(StreamResponse prototype) {
+  public static Builder newBuilder(wang.huaiting.proto.StreamResponse prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   public Builder toBuilder() {
@@ -237,9 +237,9 @@ public  final class StreamResponse extends
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @Override
+  @java.lang.Override
   protected Builder newBuilderForType(
-      BuilderParent parent) {
+      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
@@ -252,14 +252,14 @@ public  final class StreamResponse extends
       wang.huaiting.proto.StreamResponseOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return StudentProto.internal_static_wang_huaitng_proto_StreamResponse_descriptor;
+      return wang.huaiting.proto.StudentProto.internal_static_wang_huaitng_proto_StreamResponse_descriptor;
     }
 
-    protected FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return StudentProto.internal_static_wang_huaitng_proto_StreamResponse_fieldAccessorTable
+      return wang.huaiting.proto.StudentProto.internal_static_wang_huaitng_proto_StreamResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              StreamResponse.class, Builder.class);
+              wang.huaiting.proto.StreamResponse.class, wang.huaiting.proto.StreamResponse.Builder.class);
     }
 
     // Construct using wang.huaiting.proto.StreamResponse.newBuilder()
@@ -268,7 +268,7 @@ public  final class StreamResponse extends
     }
 
     private Builder(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -286,23 +286,23 @@ public  final class StreamResponse extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return StudentProto.internal_static_wang_huaitng_proto_StreamResponse_descriptor;
+      return wang.huaiting.proto.StudentProto.internal_static_wang_huaitng_proto_StreamResponse_descriptor;
     }
 
-    public StreamResponse getDefaultInstanceForType() {
-      return StreamResponse.getDefaultInstance();
+    public wang.huaiting.proto.StreamResponse getDefaultInstanceForType() {
+      return wang.huaiting.proto.StreamResponse.getDefaultInstance();
     }
 
-    public StreamResponse build() {
-      StreamResponse result = buildPartial();
+    public wang.huaiting.proto.StreamResponse build() {
+      wang.huaiting.proto.StreamResponse result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
       return result;
     }
 
-    public StreamResponse buildPartial() {
-      StreamResponse result = new StreamResponse(this);
+    public wang.huaiting.proto.StreamResponse buildPartial() {
+      wang.huaiting.proto.StreamResponse result = new wang.huaiting.proto.StreamResponse(this);
       result.responseInfo_ = responseInfo_;
       onBuilt();
       return result;
@@ -335,16 +335,16 @@ public  final class StreamResponse extends
       return (Builder) super.addRepeatedField(field, value);
     }
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof StreamResponse) {
-        return mergeFrom((StreamResponse)other);
+      if (other instanceof wang.huaiting.proto.StreamResponse) {
+        return mergeFrom((wang.huaiting.proto.StreamResponse)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(StreamResponse other) {
-      if (other == StreamResponse.getDefaultInstance()) return this;
+    public Builder mergeFrom(wang.huaiting.proto.StreamResponse other) {
+      if (other == wang.huaiting.proto.StreamResponse.getDefaultInstance()) return this;
       if (!other.getResponseInfo().isEmpty()) {
         responseInfo_ = other.responseInfo_;
         onChanged();
@@ -361,11 +361,11 @@ public  final class StreamResponse extends
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      StreamResponse parsedMessage = null;
+      wang.huaiting.proto.StreamResponse parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (StreamResponse) e.getUnfinishedMessage();
+        parsedMessage = (wang.huaiting.proto.StreamResponse) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -375,20 +375,20 @@ public  final class StreamResponse extends
       return this;
     }
 
-    private Object responseInfo_ = "";
+    private java.lang.Object responseInfo_ = "";
     /**
      * <code>string response_info = 1;</code>
      */
-    public String getResponseInfo() {
-      Object ref = responseInfo_;
-      if (!(ref instanceof String)) {
+    public java.lang.String getResponseInfo() {
+      java.lang.Object ref = responseInfo_;
+      if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
-        String s = bs.toStringUtf8();
+        java.lang.String s = bs.toStringUtf8();
         responseInfo_ = s;
         return s;
       } else {
-        return (String) ref;
+        return (java.lang.String) ref;
       }
     }
     /**
@@ -396,11 +396,11 @@ public  final class StreamResponse extends
      */
     public com.google.protobuf.ByteString
         getResponseInfoBytes() {
-      Object ref = responseInfo_;
+      java.lang.Object ref = responseInfo_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
-                (String) ref);
+                (java.lang.String) ref);
         responseInfo_ = b;
         return b;
       } else {
@@ -411,7 +411,7 @@ public  final class StreamResponse extends
      * <code>string response_info = 1;</code>
      */
     public Builder setResponseInfo(
-        String value) {
+        java.lang.String value) {
       if (value == null) {
     throw new NullPointerException();
   }
@@ -458,12 +458,12 @@ public  final class StreamResponse extends
   }
 
   // @@protoc_insertion_point(class_scope:wang.huaitng.proto.StreamResponse)
-  private static final StreamResponse DEFAULT_INSTANCE;
+  private static final wang.huaiting.proto.StreamResponse DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new StreamResponse();
+    DEFAULT_INSTANCE = new wang.huaiting.proto.StreamResponse();
   }
 
-  public static StreamResponse getDefaultInstance() {
+  public static wang.huaiting.proto.StreamResponse getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
@@ -481,12 +481,12 @@ public  final class StreamResponse extends
     return PARSER;
   }
 
-  @Override
+  @java.lang.Override
   public com.google.protobuf.Parser<StreamResponse> getParserForType() {
     return PARSER;
   }
 
-  public StreamResponse getDefaultInstanceForType() {
+  public wang.huaiting.proto.StreamResponse getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

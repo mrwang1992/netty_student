@@ -18,7 +18,7 @@ public  final class StudentResponseList extends
     studentResponse_ = java.util.Collections.emptyList();
   }
 
-  @Override
+  @java.lang.Override
   public final com.google.protobuf.UnknownFieldSet
   getUnknownFields() {
     return com.google.protobuf.UnknownFieldSet.getDefaultInstance();
@@ -45,11 +45,11 @@ public  final class StudentResponseList extends
           }
           case 10: {
             if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
-              studentResponse_ = new java.util.ArrayList<StudentResponse>();
+              studentResponse_ = new java.util.ArrayList<wang.huaiting.proto.StudentResponse>();
               mutable_bitField0_ |= 0x00000001;
             }
             studentResponse_.add(
-                input.readMessage(StudentResponse.parser(), extensionRegistry));
+                input.readMessage(wang.huaiting.proto.StudentResponse.parser(), extensionRegistry));
             break;
           }
         }
@@ -68,28 +68,28 @@ public  final class StudentResponseList extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return StudentProto.internal_static_wang_huaitng_proto_StudentResponseList_descriptor;
+    return wang.huaiting.proto.StudentProto.internal_static_wang_huaitng_proto_StudentResponseList_descriptor;
   }
 
-  protected FieldAccessorTable
+  protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return StudentProto.internal_static_wang_huaitng_proto_StudentResponseList_fieldAccessorTable
+    return wang.huaiting.proto.StudentProto.internal_static_wang_huaitng_proto_StudentResponseList_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            StudentResponseList.class, Builder.class);
+            wang.huaiting.proto.StudentResponseList.class, wang.huaiting.proto.StudentResponseList.Builder.class);
   }
 
   public static final int STUDENTRESPONSE_FIELD_NUMBER = 1;
-  private java.util.List<StudentResponse> studentResponse_;
+  private java.util.List<wang.huaiting.proto.StudentResponse> studentResponse_;
   /**
    * <code>repeated .wang.huaitng.proto.StudentResponse studentResponse = 1;</code>
    */
-  public java.util.List<StudentResponse> getStudentResponseList() {
+  public java.util.List<wang.huaiting.proto.StudentResponse> getStudentResponseList() {
     return studentResponse_;
   }
   /**
    * <code>repeated .wang.huaitng.proto.StudentResponse studentResponse = 1;</code>
    */
-  public java.util.List<? extends StudentResponseOrBuilder>
+  public java.util.List<? extends wang.huaiting.proto.StudentResponseOrBuilder> 
       getStudentResponseOrBuilderList() {
     return studentResponse_;
   }
@@ -102,13 +102,13 @@ public  final class StudentResponseList extends
   /**
    * <code>repeated .wang.huaitng.proto.StudentResponse studentResponse = 1;</code>
    */
-  public StudentResponse getStudentResponse(int index) {
+  public wang.huaiting.proto.StudentResponse getStudentResponse(int index) {
     return studentResponse_.get(index);
   }
   /**
    * <code>repeated .wang.huaitng.proto.StudentResponse studentResponse = 1;</code>
    */
-  public StudentResponseOrBuilder getStudentResponseOrBuilder(
+  public wang.huaiting.proto.StudentResponseOrBuilder getStudentResponseOrBuilder(
       int index) {
     return studentResponse_.get(index);
   }
@@ -144,15 +144,15 @@ public  final class StudentResponseList extends
   }
 
   private static final long serialVersionUID = 0L;
-  @Override
-  public boolean equals(final Object obj) {
+  @java.lang.Override
+  public boolean equals(final java.lang.Object obj) {
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof StudentResponseList)) {
+    if (!(obj instanceof wang.huaiting.proto.StudentResponseList)) {
       return super.equals(obj);
     }
-    StudentResponseList other = (StudentResponseList) obj;
+    wang.huaiting.proto.StudentResponseList other = (wang.huaiting.proto.StudentResponseList) obj;
 
     boolean result = true;
     result = result && getStudentResponseList()
@@ -160,7 +160,7 @@ public  final class StudentResponseList extends
     return result;
   }
 
-  @Override
+  @java.lang.Override
   public int hashCode() {
     if (memoizedHashCode != 0) {
       return memoizedHashCode;
@@ -176,58 +176,58 @@ public  final class StudentResponseList extends
     return hash;
   }
 
-  public static StudentResponseList parseFrom(
+  public static wang.huaiting.proto.StudentResponseList parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static StudentResponseList parseFrom(
+  public static wang.huaiting.proto.StudentResponseList parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static StudentResponseList parseFrom(byte[] data)
+  public static wang.huaiting.proto.StudentResponseList parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static StudentResponseList parseFrom(
+  public static wang.huaiting.proto.StudentResponseList parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static StudentResponseList parseFrom(java.io.InputStream input)
+  public static wang.huaiting.proto.StudentResponseList parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static StudentResponseList parseFrom(
+  public static wang.huaiting.proto.StudentResponseList parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
-  public static StudentResponseList parseDelimitedFrom(java.io.InputStream input)
+  public static wang.huaiting.proto.StudentResponseList parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
-  public static StudentResponseList parseDelimitedFrom(
+  public static wang.huaiting.proto.StudentResponseList parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static StudentResponseList parseFrom(
+  public static wang.huaiting.proto.StudentResponseList parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static StudentResponseList parseFrom(
+  public static wang.huaiting.proto.StudentResponseList parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -239,7 +239,7 @@ public  final class StudentResponseList extends
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(StudentResponseList prototype) {
+  public static Builder newBuilder(wang.huaiting.proto.StudentResponseList prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   public Builder toBuilder() {
@@ -247,9 +247,9 @@ public  final class StudentResponseList extends
         ? new Builder() : new Builder().mergeFrom(this);
   }
 
-  @Override
+  @java.lang.Override
   protected Builder newBuilderForType(
-      BuilderParent parent) {
+      com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
     Builder builder = new Builder(parent);
     return builder;
   }
@@ -259,17 +259,17 @@ public  final class StudentResponseList extends
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
       // @@protoc_insertion_point(builder_implements:wang.huaitng.proto.StudentResponseList)
-      StudentResponseListOrBuilder {
+      wang.huaiting.proto.StudentResponseListOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return StudentProto.internal_static_wang_huaitng_proto_StudentResponseList_descriptor;
+      return wang.huaiting.proto.StudentProto.internal_static_wang_huaitng_proto_StudentResponseList_descriptor;
     }
 
-    protected FieldAccessorTable
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return StudentProto.internal_static_wang_huaitng_proto_StudentResponseList_fieldAccessorTable
+      return wang.huaiting.proto.StudentProto.internal_static_wang_huaitng_proto_StudentResponseList_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              StudentResponseList.class, Builder.class);
+              wang.huaiting.proto.StudentResponseList.class, wang.huaiting.proto.StudentResponseList.Builder.class);
     }
 
     // Construct using wang.huaiting.proto.StudentResponseList.newBuilder()
@@ -278,7 +278,7 @@ public  final class StudentResponseList extends
     }
 
     private Builder(
-        BuilderParent parent) {
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
       super(parent);
       maybeForceBuilderInitialization();
     }
@@ -301,23 +301,23 @@ public  final class StudentResponseList extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return StudentProto.internal_static_wang_huaitng_proto_StudentResponseList_descriptor;
+      return wang.huaiting.proto.StudentProto.internal_static_wang_huaitng_proto_StudentResponseList_descriptor;
     }
 
-    public StudentResponseList getDefaultInstanceForType() {
-      return StudentResponseList.getDefaultInstance();
+    public wang.huaiting.proto.StudentResponseList getDefaultInstanceForType() {
+      return wang.huaiting.proto.StudentResponseList.getDefaultInstance();
     }
 
-    public StudentResponseList build() {
-      StudentResponseList result = buildPartial();
+    public wang.huaiting.proto.StudentResponseList build() {
+      wang.huaiting.proto.StudentResponseList result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
       return result;
     }
 
-    public StudentResponseList buildPartial() {
-      StudentResponseList result = new StudentResponseList(this);
+    public wang.huaiting.proto.StudentResponseList buildPartial() {
+      wang.huaiting.proto.StudentResponseList result = new wang.huaiting.proto.StudentResponseList(this);
       int from_bitField0_ = bitField0_;
       if (studentResponseBuilder_ == null) {
         if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -359,16 +359,16 @@ public  final class StudentResponseList extends
       return (Builder) super.addRepeatedField(field, value);
     }
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof StudentResponseList) {
-        return mergeFrom((StudentResponseList)other);
+      if (other instanceof wang.huaiting.proto.StudentResponseList) {
+        return mergeFrom((wang.huaiting.proto.StudentResponseList)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(StudentResponseList other) {
-      if (other == StudentResponseList.getDefaultInstance()) return this;
+    public Builder mergeFrom(wang.huaiting.proto.StudentResponseList other) {
+      if (other == wang.huaiting.proto.StudentResponseList.getDefaultInstance()) return this;
       if (studentResponseBuilder_ == null) {
         if (!other.studentResponse_.isEmpty()) {
           if (studentResponse_.isEmpty()) {
@@ -407,11 +407,11 @@ public  final class StudentResponseList extends
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
-      StudentResponseList parsedMessage = null;
+      wang.huaiting.proto.StudentResponseList parsedMessage = null;
       try {
         parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        parsedMessage = (StudentResponseList) e.getUnfinishedMessage();
+        parsedMessage = (wang.huaiting.proto.StudentResponseList) e.getUnfinishedMessage();
         throw e.unwrapIOException();
       } finally {
         if (parsedMessage != null) {
@@ -422,22 +422,22 @@ public  final class StudentResponseList extends
     }
     private int bitField0_;
 
-    private java.util.List<StudentResponse> studentResponse_ =
+    private java.util.List<wang.huaiting.proto.StudentResponse> studentResponse_ =
       java.util.Collections.emptyList();
     private void ensureStudentResponseIsMutable() {
       if (!((bitField0_ & 0x00000001) == 0x00000001)) {
-        studentResponse_ = new java.util.ArrayList<StudentResponse>(studentResponse_);
+        studentResponse_ = new java.util.ArrayList<wang.huaiting.proto.StudentResponse>(studentResponse_);
         bitField0_ |= 0x00000001;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        StudentResponse, StudentResponse.Builder, StudentResponseOrBuilder> studentResponseBuilder_;
+        wang.huaiting.proto.StudentResponse, wang.huaiting.proto.StudentResponse.Builder, wang.huaiting.proto.StudentResponseOrBuilder> studentResponseBuilder_;
 
     /**
      * <code>repeated .wang.huaitng.proto.StudentResponse studentResponse = 1;</code>
      */
-    public java.util.List<StudentResponse> getStudentResponseList() {
+    public java.util.List<wang.huaiting.proto.StudentResponse> getStudentResponseList() {
       if (studentResponseBuilder_ == null) {
         return java.util.Collections.unmodifiableList(studentResponse_);
       } else {
@@ -457,7 +457,7 @@ public  final class StudentResponseList extends
     /**
      * <code>repeated .wang.huaitng.proto.StudentResponse studentResponse = 1;</code>
      */
-    public StudentResponse getStudentResponse(int index) {
+    public wang.huaiting.proto.StudentResponse getStudentResponse(int index) {
       if (studentResponseBuilder_ == null) {
         return studentResponse_.get(index);
       } else {
@@ -468,7 +468,7 @@ public  final class StudentResponseList extends
      * <code>repeated .wang.huaitng.proto.StudentResponse studentResponse = 1;</code>
      */
     public Builder setStudentResponse(
-        int index, StudentResponse value) {
+        int index, wang.huaiting.proto.StudentResponse value) {
       if (studentResponseBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -485,7 +485,7 @@ public  final class StudentResponseList extends
      * <code>repeated .wang.huaitng.proto.StudentResponse studentResponse = 1;</code>
      */
     public Builder setStudentResponse(
-        int index, StudentResponse.Builder builderForValue) {
+        int index, wang.huaiting.proto.StudentResponse.Builder builderForValue) {
       if (studentResponseBuilder_ == null) {
         ensureStudentResponseIsMutable();
         studentResponse_.set(index, builderForValue.build());
@@ -498,7 +498,7 @@ public  final class StudentResponseList extends
     /**
      * <code>repeated .wang.huaitng.proto.StudentResponse studentResponse = 1;</code>
      */
-    public Builder addStudentResponse(StudentResponse value) {
+    public Builder addStudentResponse(wang.huaiting.proto.StudentResponse value) {
       if (studentResponseBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -515,7 +515,7 @@ public  final class StudentResponseList extends
      * <code>repeated .wang.huaitng.proto.StudentResponse studentResponse = 1;</code>
      */
     public Builder addStudentResponse(
-        int index, StudentResponse value) {
+        int index, wang.huaiting.proto.StudentResponse value) {
       if (studentResponseBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -532,7 +532,7 @@ public  final class StudentResponseList extends
      * <code>repeated .wang.huaitng.proto.StudentResponse studentResponse = 1;</code>
      */
     public Builder addStudentResponse(
-        StudentResponse.Builder builderForValue) {
+        wang.huaiting.proto.StudentResponse.Builder builderForValue) {
       if (studentResponseBuilder_ == null) {
         ensureStudentResponseIsMutable();
         studentResponse_.add(builderForValue.build());
@@ -546,7 +546,7 @@ public  final class StudentResponseList extends
      * <code>repeated .wang.huaitng.proto.StudentResponse studentResponse = 1;</code>
      */
     public Builder addStudentResponse(
-        int index, StudentResponse.Builder builderForValue) {
+        int index, wang.huaiting.proto.StudentResponse.Builder builderForValue) {
       if (studentResponseBuilder_ == null) {
         ensureStudentResponseIsMutable();
         studentResponse_.add(index, builderForValue.build());
@@ -560,7 +560,7 @@ public  final class StudentResponseList extends
      * <code>repeated .wang.huaitng.proto.StudentResponse studentResponse = 1;</code>
      */
     public Builder addAllStudentResponse(
-        Iterable<? extends StudentResponse> values) {
+        java.lang.Iterable<? extends wang.huaiting.proto.StudentResponse> values) {
       if (studentResponseBuilder_ == null) {
         ensureStudentResponseIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -600,14 +600,14 @@ public  final class StudentResponseList extends
     /**
      * <code>repeated .wang.huaitng.proto.StudentResponse studentResponse = 1;</code>
      */
-    public StudentResponse.Builder getStudentResponseBuilder(
+    public wang.huaiting.proto.StudentResponse.Builder getStudentResponseBuilder(
         int index) {
       return getStudentResponseFieldBuilder().getBuilder(index);
     }
     /**
      * <code>repeated .wang.huaitng.proto.StudentResponse studentResponse = 1;</code>
      */
-    public StudentResponseOrBuilder getStudentResponseOrBuilder(
+    public wang.huaiting.proto.StudentResponseOrBuilder getStudentResponseOrBuilder(
         int index) {
       if (studentResponseBuilder_ == null) {
         return studentResponse_.get(index);  } else {
@@ -617,7 +617,7 @@ public  final class StudentResponseList extends
     /**
      * <code>repeated .wang.huaitng.proto.StudentResponse studentResponse = 1;</code>
      */
-    public java.util.List<? extends StudentResponseOrBuilder>
+    public java.util.List<? extends wang.huaiting.proto.StudentResponseOrBuilder> 
          getStudentResponseOrBuilderList() {
       if (studentResponseBuilder_ != null) {
         return studentResponseBuilder_.getMessageOrBuilderList();
@@ -628,31 +628,31 @@ public  final class StudentResponseList extends
     /**
      * <code>repeated .wang.huaitng.proto.StudentResponse studentResponse = 1;</code>
      */
-    public StudentResponse.Builder addStudentResponseBuilder() {
+    public wang.huaiting.proto.StudentResponse.Builder addStudentResponseBuilder() {
       return getStudentResponseFieldBuilder().addBuilder(
-          StudentResponse.getDefaultInstance());
+          wang.huaiting.proto.StudentResponse.getDefaultInstance());
     }
     /**
      * <code>repeated .wang.huaitng.proto.StudentResponse studentResponse = 1;</code>
      */
-    public StudentResponse.Builder addStudentResponseBuilder(
+    public wang.huaiting.proto.StudentResponse.Builder addStudentResponseBuilder(
         int index) {
       return getStudentResponseFieldBuilder().addBuilder(
-          index, StudentResponse.getDefaultInstance());
+          index, wang.huaiting.proto.StudentResponse.getDefaultInstance());
     }
     /**
      * <code>repeated .wang.huaitng.proto.StudentResponse studentResponse = 1;</code>
      */
-    public java.util.List<StudentResponse.Builder>
+    public java.util.List<wang.huaiting.proto.StudentResponse.Builder> 
          getStudentResponseBuilderList() {
       return getStudentResponseFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        StudentResponse, StudentResponse.Builder, StudentResponseOrBuilder>
+        wang.huaiting.proto.StudentResponse, wang.huaiting.proto.StudentResponse.Builder, wang.huaiting.proto.StudentResponseOrBuilder> 
         getStudentResponseFieldBuilder() {
       if (studentResponseBuilder_ == null) {
         studentResponseBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            StudentResponse, StudentResponse.Builder, StudentResponseOrBuilder>(
+            wang.huaiting.proto.StudentResponse, wang.huaiting.proto.StudentResponse.Builder, wang.huaiting.proto.StudentResponseOrBuilder>(
                 studentResponse_,
                 ((bitField0_ & 0x00000001) == 0x00000001),
                 getParentForChildren(),
@@ -676,12 +676,12 @@ public  final class StudentResponseList extends
   }
 
   // @@protoc_insertion_point(class_scope:wang.huaitng.proto.StudentResponseList)
-  private static final StudentResponseList DEFAULT_INSTANCE;
+  private static final wang.huaiting.proto.StudentResponseList DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new StudentResponseList();
+    DEFAULT_INSTANCE = new wang.huaiting.proto.StudentResponseList();
   }
 
-  public static StudentResponseList getDefaultInstance() {
+  public static wang.huaiting.proto.StudentResponseList getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
@@ -699,12 +699,12 @@ public  final class StudentResponseList extends
     return PARSER;
   }
 
-  @Override
+  @java.lang.Override
   public com.google.protobuf.Parser<StudentResponseList> getParserForType() {
     return PARSER;
   }
 
-  public StudentResponseList getDefaultInstanceForType() {
+  public wang.huaiting.proto.StudentResponseList getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

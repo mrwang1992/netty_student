@@ -16,7 +16,7 @@ import java.util.Arrays;
  *  合并
  *      讲buffer数组读出到外部 并且是顺序的， 特性同上
  *
- *  test client
+ *  Test client
  *      nc localhost 8899
  *      hellowor
  */

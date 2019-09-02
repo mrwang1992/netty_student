@@ -10,7 +10,7 @@ public interface MyResponseOrBuilder extends
   /**
    * <code>string ralname = 2;</code>
    */
-  String getRalname();
+  java.lang.String getRalname();
   /**
    * <code>string ralname = 2;</code>
    */

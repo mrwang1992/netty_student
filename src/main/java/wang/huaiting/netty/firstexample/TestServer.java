@@ -11,8 +11,8 @@ public class TestServer {
     public static void main(String[] args) throws Exception {
         // 事件循环线程组
         // 可以理解为两个死循环等待事件进入处理
-        EventLoopGroup bossGroup = new NioEventLoopGroup(); // 获取连接
-        EventLoopGroup workerGroup = new NioEventLoopGroup(); // 处理连接
+        EventLoopGroup bossGroup = new NioEventLoopGroup(1); // 获取连接
+        EventLoopGroup workerGroup = new NioEventLoopGroup(20); // 处理连接
 
         try {
             // 帮助启动的类

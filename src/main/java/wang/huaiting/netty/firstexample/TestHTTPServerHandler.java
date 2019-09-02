@@ -1,13 +1,15 @@
 package wang.huaiting.netty.firstexample;
 
 import io.netty.buffer.ByteBuf;
+import io.netty.buffer.ByteBufAllocator;
 import io.netty.buffer.Unpooled;
-import io.netty.channel.ChannelHandlerContext;
-import io.netty.channel.SimpleChannelInboundHandler;
+import io.netty.channel.*;
 import io.netty.handler.codec.http.*;
 import io.netty.util.CharsetUtil;
 
 import java.net.URI;
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
 
 public class TestHTTPServerHandler extends SimpleChannelInboundHandler<HttpObject> {
 
@@ -67,7 +69,21 @@ public class TestHTTPServerHandler extends SimpleChannelInboundHandler<HttpObjec
             response.headers().set(HttpHeaderNames.CONTENT_LENGTH, content.readableBytes());
 
             // 写回客户端 直接 write 是写到缓冲区， 要选用 writeAndFlush
-            ctx.writeAndFlush(response);
+            ChannelFuture cf = ctx.writeAndFlush(response);
+            System.out.println("start");
+            cf.addListener(new ChannelFutureListener(){
+                @Override
+                public void operationComplete(ChannelFuture future) throws Exception {
+                    if (future.isSuccess()){
+                        System.out.println("is success");
+                    } else {
+                        System.out.println("write error");
+                        future.cause().printStackTrace();
+                    }
+                }
+            });
+
+            System.out.println("not pading");
 
             // 全双工模式下，服务端也能够主动关闭请求
             ctx.close();

@@ -57,7 +57,7 @@ public final class StudentProto {
   private static  com.google.protobuf.Descriptors.FileDescriptor
       descriptor;
   static {
-    String[] descriptorData = {
+    java.lang.String[] descriptorData = {
       "\n\rStudent.proto\022\022wang.huaitng.proto\"\035\n\tM" +
       "yRequest\022\020\n\010username\030\001 \001(\t\"\035\n\nMyResponse" +
       "\022\017\n\007ralname\030\002 \001(\t\"\035\n\016StudentRequest\022\013\n\003a" +
@@ -97,43 +97,43 @@ public final class StudentProto {
     internal_static_wang_huaitng_proto_MyRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_wang_huaitng_proto_MyRequest_descriptor,
-        new String[] { "Username", });
+        new java.lang.String[] { "Username", });
     internal_static_wang_huaitng_proto_MyResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_wang_huaitng_proto_MyResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_wang_huaitng_proto_MyResponse_descriptor,
-        new String[] { "Ralname", });
+        new java.lang.String[] { "Ralname", });
     internal_static_wang_huaitng_proto_StudentRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_wang_huaitng_proto_StudentRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_wang_huaitng_proto_StudentRequest_descriptor,
-        new String[] { "Age", });
+        new java.lang.String[] { "Age", });
     internal_static_wang_huaitng_proto_StudentResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_wang_huaitng_proto_StudentResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_wang_huaitng_proto_StudentResponse_descriptor,
-        new String[] { "Name", "Age", "City", });
+        new java.lang.String[] { "Name", "Age", "City", });
     internal_static_wang_huaitng_proto_StudentResponseList_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_wang_huaitng_proto_StudentResponseList_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_wang_huaitng_proto_StudentResponseList_descriptor,
-        new String[] { "StudentResponse", });
+        new java.lang.String[] { "StudentResponse", });
     internal_static_wang_huaitng_proto_StreamRequest_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_wang_huaitng_proto_StreamRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_wang_huaitng_proto_StreamRequest_descriptor,
-        new String[] { "RequestInfo", });
+        new java.lang.String[] { "RequestInfo", });
     internal_static_wang_huaitng_proto_StreamResponse_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_wang_huaitng_proto_StreamResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_wang_huaitng_proto_StreamResponse_descriptor,
-        new String[] { "ResponseInfo", });
+        new java.lang.String[] { "ResponseInfo", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)
